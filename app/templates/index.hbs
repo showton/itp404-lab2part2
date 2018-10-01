@@ -1,0 +1,32 @@
+<head>
+  <style media="screen">
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      font-family: 'Esteban', serif;
+    }
+    li a {
+      color: black;
+      text-decoration: none;
+      padding: 1%;
+    }
+    li a:hover {
+      color: #f2cdaf;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Esteban|Montserrat" rel="stylesheet">
+</head>
+
+<div style="margin: 2%;">
+<h1 style="color: #2b78a2;">User Names</h1>
+<ul>
+  {{#each model as |post|}}
+  <li>
+    {{#link-to "post" post.id}}
+      {{post.title}}
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+</div>
